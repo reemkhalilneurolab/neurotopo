@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neurotopo"
+version = "0.1.0"
+description = "Topological Sholl descriptors for neuron morphology: SWC files in, descriptor distance matrices out."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+authors = [
+    { name = "Reem Khalil Neuroscience Lab" },
+]
+keywords = ["neuroscience", "morphology", "SWC", "Sholl", "dendrite", "topology"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+
+dependencies = [
+    "numpy>=1.23",
+    "pandas>=1.5",
+    "scipy>=1.9",
+    "scikit-learn>=1.1",
+    "networkx>=2.8",
+    "matplotlib>=3.5",
+    "seaborn>=0.12",
+    "plotly>=5.0",
+]
+
+[project.optional-dependencies]
+# Running the test suite.
+test = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/reemkhalilneurolab/neurotopo"
+Repository = "https://github.com/reemkhalilneurolab/neurotopo"
+
+[tool.setuptools.packages.find]
+where = ["src"]

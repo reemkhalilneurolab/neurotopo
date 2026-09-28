@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Output of a local run. figures/Briggs_lm_corrected_20260820/ is the shipped
+# result behind the paper and IS tracked; anything else under figures/ is
+# something you generated and can regenerate.
+figures/*
+!figures/Briggs_lm_corrected_20260820/
+!figures/Briggs_lm_corrected_20260820/**
+
+# Bulk regenerable output, should a run produce it inside the tracked folder.
+figures/*/neuron_data.pkl
+figures/*/plots/Descriptors/step_functions/
